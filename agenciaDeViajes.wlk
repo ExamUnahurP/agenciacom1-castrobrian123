@@ -79,7 +79,7 @@ class Coordinador inherits Paquete {
 
     //var cantidadDeViajes
 
-    method cantidadDeViajes(){ //no se me ocurrio de donde sacar la cantidad de viajes
+    method cantidadDeViajes(){
         return paquetes.filter({unPaquete => unPaquete.pais()}).size()
     }
 
