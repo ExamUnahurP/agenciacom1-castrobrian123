@@ -49,7 +49,7 @@ class Nacional inherits Paquete {
     }
 
     override method valorFinal(){
-        return super() + 20
+        return super()
     }
 
 }
@@ -69,7 +69,7 @@ class Internacional inherits Paquete {
     method esLugarDeInteres() = esLugarDeInteres
 
     override method valorFinal(){
-        return super()
+        return super() + 20
     }
 
 
