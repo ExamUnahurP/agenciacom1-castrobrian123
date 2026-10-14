@@ -22,25 +22,47 @@ class Nacional inherits Paquete {
 
     var provincia
 
+    method provincia() = provincia
+
     var actividades = []
 
-    method obtenerTodasLasActividades(){
-        actividades.map({unaActividad => unaActividad.})
+    //por ejemplo // const correr = "estoy corriendo" 
+
+    method agregarActividad(unaActividad){
+        actividades.add.(unaActividad)
     }
 
-    var nombre
+    method obtenerTodasLasActividades(){
+        actividades.map({unaActividad => unaActividad.actividad()})
+    }
+
 }
 
 class Internacional inherits Paquete {
 
     var pais
 
+    method pais()
+
     var cantidadDeEscalas
+
+    method cantidadDeEscalas()
+
+    //method obtenerKilometrosParaLlegarADestino(){
+
+    //}
+
+    var esLugarDeInteres
+
+    method esLugarDeInteres()
+
 
 }
 
 class Coordinador {
     var paquetes = []
+
+    var grupo
 
     var cantidadDeViajes
 
