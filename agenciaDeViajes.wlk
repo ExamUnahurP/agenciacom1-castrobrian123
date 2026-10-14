@@ -72,6 +72,10 @@ class Internacional inherits Paquete {
 
     method esLugarDeInteres() = esLugarDeInteres
 
+    override valorFinal(){
+        return super()
+    }
+
 
 }
 
