@@ -3,19 +3,19 @@
 class Paquete {
     var duracion
 
-    method duracion()
+    method duracion() = duracion
 
     var precio
 
-    method precio()
+    method precio() = precio
 
     var beneficio
 
-    method beneficio()
+    method beneficio() = beneficio
 
     var coordinadorConCargo
 
-    method coordinadorConCargo()
+    method coordinadorConCargo() = coordinadorConCargo
 }
 
 class Nacional inherits Paquete {
@@ -40,21 +40,13 @@ class Nacional inherits Paquete {
 
 class Internacional inherits Paquete {
 
-    var paises = []
+    var pais
 
-    method paises()
-
-    method agregarPais(unPais){
-        paises.add(unPais)
-    }
-
-    method obtenerTodosLosPaises(){
-        paises.map({unPais => unPais.pais()})
-    }
+    method pais() = pais
 
     var cantidadDeEscalas
 
-    method cantidadDeEscalas()
+    method cantidadDeEscalas() = cantidadDeEscalas
 
     //method obtenerKilometrosParaLlegarADestino(){
 
@@ -62,35 +54,30 @@ class Internacional inherits Paquete {
 
     var esLugarDeInteres
 
-    method esLugarDeInteres()
+    method esLugarDeInteres() = esLugarDeInteres
 
 
 }
 
-class Coordinador {
-    var paquetes = []
-
-    var grupoQueSeEstaAsistiendo
-
-    method grupoQueSeEstaAsistiendo()
+class Coordinador inherits Paquete {
 
     var cantidadDeViajes
 
-    method cantidadDeViajes(){
-        paquetes.filter({unPaquete => unPaquete.})
+    method cantidadDeViajes(){ //no se me ocurrio de donde sacar la cantidad de via
+        paquetes.filter({unPaquete => unPaquete.pais()}).size()
     }
 
     var estaMotivado
 
-    method estaMotivado()
+    method estaMotivado() = estaMotivado
 
     var añosDeExperiencia
 
-    method añosDeExperiencia()
+    method añosDeExperiencia() = añosDeExperiencia
 
     var rol
 
-    method rol()
+    method rol() = rol
 
     method cambiarRol(nuevoRol){
         if(nuevoRol == Guia or nuevoRol == AsistenteLogistico or nuevoRol == Acompañante){
@@ -102,7 +89,6 @@ class Coordinador {
 
 
 }
-
 
 
 
