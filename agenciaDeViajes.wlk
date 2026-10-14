@@ -9,9 +9,17 @@ class Paquete {
 
     method precio() = precio
 
-    var beneficio
+    var beneficios = []
 
-    method beneficio() = beneficio
+    method beneficios() = beneficios
+
+    method agregarBeneficio(unBeneficio){
+        beneficios.add(unBeneficio)
+    }
+
+    method obtenerResultadoDBeneficios(){
+        beneficios.sum()
+    }
 
     var coordinadorConCargo
 
