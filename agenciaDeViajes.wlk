@@ -48,7 +48,7 @@ class Nacional inherits Paquete {
         return actividades.map({unaActividad => unaActividad.actividad()})
     }
 
-    override valorFinal(){
+    override method valorFinal(){
         return super() 
     }
 
@@ -72,7 +72,7 @@ class Internacional inherits Paquete {
 
     method esLugarDeInteres() = esLugarDeInteres
 
-    override valorFinal(){
+    override method valorFinal(){
         return super()
     }
 
