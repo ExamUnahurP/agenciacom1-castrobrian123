@@ -1,27 +1,41 @@
 
 
-class Nacional {
+class Paquete {
     var duracion
+
+    method duracion()
+
     var precio
-    //var beneficio
-    var coordinador
+
+    method precio()
+
+    var beneficio
+
+    method beneficio()
+
+    var coordinadorConCargo
+
+    method coordinadorConCargo()
+}
+
+class Nacional inherits Paquete {
 
     var provincia
 
     var actividades = []
 
-    //var nombre
+    method obtenerTodasLasActividades(){
+        actividades.map({unaActividad => unaActividad.})
+    }
+
+    var nombre
 }
 
-class Internacional {
-    var duracion
-    var precio
-    //var beneficio
-    var coordinador
+class Internacional inherits Paquete {
 
     var pais
 
-    //var cantidadDeEscalas
+    var cantidadDeEscalas
 
 }
 
@@ -43,8 +57,17 @@ class Coordinador {
     var rol
 
     method rol()
-}
 
+    method cambiarRol(nuevoRol){
+        if(nuevoRol == Guia or nuevoRol == AsistenteLogistico or nuevoRol == Acompañante){
+            rol = nuevoRol
+        } else{
+            self.error("rol no existente")
+        }
+    }
+
+
+}
 
 
 
