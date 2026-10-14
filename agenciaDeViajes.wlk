@@ -5,9 +5,9 @@ class Paquete {
 
     method duracion() = duracion
 
-    var precio
+    var precioBase
 
-    method precio() = precio
+    method precioBase() = precioBase
 
     var beneficios = []
 
@@ -17,7 +17,7 @@ class Paquete {
         beneficios.add(unBeneficio)
     }
 
-    method obtenerResultadoDBeneficios(){
+    method obtenerTotalDeBeneficios(){
         beneficios.sum()
     }
 
@@ -26,7 +26,7 @@ class Paquete {
     method coordinadorConCargo() = coordinadorConCargo
 
     method valorFinal(){
-        self.precioBase() + self.beneficio()
+        return self.precioBase() + self.obtenerTotalDeBeneficios()
     }
 }
 
@@ -45,7 +45,11 @@ class Nacional inherits Paquete {
     }
 
     method obtenerTodasLasActividades(){
-        actividades.map({unaActividad => unaActividad.actividad()})
+        return actividades.map({unaActividad => unaActividad.actividad()})
+    }
+
+    override valorFinal(){
+        return super() 
     }
 
 }
@@ -76,7 +80,7 @@ class Coordinador inherits Paquete {
     //var cantidadDeViajes
 
     method cantidadDeViajes(){ //no se me ocurrio de donde sacar la cantidad de viajes
-        paquetes.filter({unPaquete => unPaquete.pais()}).size()
+        return paquetes.filter({unPaquete => unPaquete.pais()}).size()
     }
 
     var estaMotivado
