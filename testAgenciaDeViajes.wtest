@@ -3,5 +3,5 @@ import agenciaDeViajes.*
 const algunPaquete_1 = new Internacional(provincia = "buenos aires",duracion = 4500, esLugarDeInteres = true )
 
 test "pack nacional sin beneficios"{
-    assert.that(algunPaquete_1.beneficios())
+    assert.equals([],algunPaquete_1.beneficios())
 }

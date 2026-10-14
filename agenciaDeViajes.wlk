@@ -75,8 +75,6 @@ class Internacional inherits Paquete {
 
 class Coordinador inherits Paquete {
 
-    //var cantidadDeViajes
-
     method cantidadDeViajes(){
         return paquetes.filter({unPaquete => unPaquete.pais()}).size()
     }
@@ -105,7 +103,6 @@ class Coordinador inherits Paquete {
 }
 
 object trasladoPrivado {
-
     var nombre = "trasladoPrivado"
     var costo = 500
 }
