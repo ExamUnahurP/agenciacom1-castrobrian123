@@ -60,7 +60,7 @@ class Internacional inherits Paquete {
 
     method pais() = pais
 
-    var cantidadDeEscalas
+    var cantidadDeEscalas = self.duracion()
 
     method cantidadDeEscalas() = cantidadDeEscalas
 
