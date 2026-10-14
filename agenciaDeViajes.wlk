@@ -40,9 +40,17 @@ class Nacional inherits Paquete {
 
 class Internacional inherits Paquete {
 
-    var pais
+    var paises = []
 
-    method pais()
+    method paises()
+
+    method agregarPais(unPais){
+        paises.add(unPais)
+    }
+
+    method obtenerTodosLosPaises(){
+        paises.map({unPais => unPais.pais()})
+    }
 
     var cantidadDeEscalas
 
@@ -62,11 +70,15 @@ class Internacional inherits Paquete {
 class Coordinador {
     var paquetes = []
 
-    var grupo
+    var grupoQueSeEstaAsistiendo
+
+    method grupoQueSeEstaAsistiendo()
 
     var cantidadDeViajes
 
-    method cantidadDeViajes()
+    method cantidadDeViajes(){
+        paquetes.filter({unPaquete => unPaquete.})
+    }
 
     var estaMotivado
 
