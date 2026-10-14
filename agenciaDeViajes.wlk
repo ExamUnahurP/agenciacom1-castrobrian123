@@ -64,10 +64,6 @@ class Internacional inherits Paquete {
 
     method cantidadDeEscalas() = cantidadDeEscalas
 
-    method KilometrosParaLlegarADestino(){
-        return self.duracion() //
-    }
-
     var esLugarDeInteres
 
     method esLugarDeInteres() = esLugarDeInteres
