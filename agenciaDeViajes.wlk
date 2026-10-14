@@ -38,8 +38,6 @@ class Nacional inherits Paquete {
 
     var actividades = []
 
-    //por ejemplo // const correr = "estoy corriendo" 
-
     method agregarActividad(unaActividad){
         actividades.add.(unaActividad)
     }
@@ -60,7 +58,9 @@ class Internacional inherits Paquete {
 
     method pais() = pais
 
-    method cantidadDeEscalas() = duracion
+    var cantidadDeEscalas = self.duracion
+
+    method cantidadDeEscalas() = cantidadDeEscalas
 
     var esLugarDeInteres
 
