@@ -1,6 +1,7 @@
 
 
 class Paquete {
+
     var duracion
 
     method duracion() = duracion
@@ -28,6 +29,7 @@ class Paquete {
     method valorFinal(){
         return self.precioBase() + self.obtenerTotalDeBeneficios()
     }
+
 }
 
 class Nacional inherits Paquete {
@@ -70,7 +72,6 @@ class Internacional inherits Paquete {
         return super() + 20
     }
 
-
 }
 
 class Coordinador inherits Paquete {
@@ -98,7 +99,6 @@ class Coordinador inherits Paquete {
             self.error("rol no existente")
         }
     }
-
 
 }
 
