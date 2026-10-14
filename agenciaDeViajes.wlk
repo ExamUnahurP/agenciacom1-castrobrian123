@@ -49,7 +49,7 @@ class Nacional inherits Paquete {
     }
 
     override method valorFinal(){
-        return super() 
+        return super() + 20
     }
 
 }
